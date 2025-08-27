@@ -532,6 +532,14 @@
                                   <span>Category</span>
                               </a>
                           </li>
+
+                          <li>
+                              <a href="settings/pincode" class="waves-effect">
+                                  <i class="uim uim-airplay"></i>
+                                  <span>Pincode</span>
+                              </a>
+                          </li>
+
                       </ul>
                   </div>
                   <!-- Sidebar -->
