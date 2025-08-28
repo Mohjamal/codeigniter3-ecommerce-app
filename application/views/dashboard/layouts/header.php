@@ -11,13 +11,13 @@
                           <a href="index.html" class="logo logo-dark">
                               <span class="logo-sm">
                                   <img
-                                      src="assets/images/logo-dark.png"
+                                      src="assets/dashboard/images/logo-dark.png"
                                       alt="logo-sm-dark"
                                       height="24" />
                               </span>
                               <span class="logo-lg">
                                   <img
-                                      src="assets/images/logo-sm-dark.png"
+                                      src="assets/dashboard/images/logo-sm-dark.png"
                                       alt="logo-dark"
                                       height="25" />
                               </span>
@@ -26,13 +26,13 @@
                           <a href="index.html" class="logo logo-light">
                               <span class="logo-sm">
                                   <img
-                                      src="assets/images/logo-light.png"
+                                      src="assets/dashboard/images/logo-light.png"
                                       alt="logo-sm-light"
                                       height="24" />
                               </span>
                               <span class="logo-lg">
                                   <img
-                                      src="assets/images/logo-sm-light.png"
+                                      src="assets/dashboard/images/logo-sm-light.png"
                                       alt="logo-light"
                                       height="25" />
                               </span>
@@ -105,7 +105,7 @@
                               aria-expanded="false">
                               <img
                                   class=""
-                                  src="assets/images/flags/us.jpg"
+                                  src="assets/dashboard/images/flags/us.jpg"
                                   alt="Header Language"
                                   height="16" />
                           </button>
@@ -113,7 +113,7 @@
                               <!-- item-->
                               <a href="javascript:void(0);" class="dropdown-item notify-item">
                                   <img
-                                      src="assets/images/flags/spain.jpg"
+                                      src="assets/dashboard/images/flags/spain.jpg"
                                       alt="user-image"
                                       class="me-1"
                                       height="12" />
@@ -123,7 +123,7 @@
                               <!-- item-->
                               <a href="javascript:void(0);" class="dropdown-item notify-item">
                                   <img
-                                      src="assets/images/flags/germany.jpg"
+                                      src="assets/dashboard/images/flags/germany.jpg"
                                       alt="user-image"
                                       class="me-1"
                                       height="12" />
@@ -133,7 +133,7 @@
                               <!-- item-->
                               <a href="javascript:void(0);" class="dropdown-item notify-item">
                                   <img
-                                      src="assets/images/flags/italy.jpg"
+                                      src="assets/dashboard/images/flags/italy.jpg"
                                       alt="user-image"
                                       class="me-1"
                                       height="12" />
@@ -143,7 +143,7 @@
                               <!-- item-->
                               <a href="javascript:void(0);" class="dropdown-item notify-item">
                                   <img
-                                      src="assets/images/flags/russia.jpg"
+                                      src="assets/dashboard/images/flags/russia.jpg"
                                       alt="user-image"
                                       class="me-1"
                                       height="12" />
@@ -167,7 +167,7 @@
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
                                               <img
-                                                  src="assets/images/brands/github.png"
+                                                  src="assets/dashboard/images/brands/github.png"
                                                   alt="Github" />
                                               <span>GitHub</span>
                                           </a>
@@ -175,7 +175,7 @@
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
                                               <img
-                                                  src="assets/images/brands/bitbucket.png"
+                                                  src="assets/dashboard/images/brands/bitbucket.png"
                                                   alt="bitbucket" />
                                               <span>Bitbucket</span>
                                           </a>
@@ -183,7 +183,7 @@
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
                                               <img
-                                                  src="assets/images/brands/dribbble.png"
+                                                  src="assets/dashboard/images/brands/dribbble.png"
                                                   alt="dribbble" />
                                               <span>Dribbble</span>
                                           </a>
@@ -194,7 +194,7 @@
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
                                               <img
-                                                  src="assets/images/brands/dropbox.png"
+                                                  src="assets/dashboard/images/brands/dropbox.png"
                                                   alt="dropbox" />
                                               <span>Dropbox</span>
                                           </a>
@@ -202,14 +202,14 @@
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
                                               <img
-                                                  src="assets/images/brands/mail_chimp.png"
+                                                  src="assets/dashboard/images/brands/mail_chimp.png"
                                                   alt="mail_chimp" />
                                               <span>Mail Chimp</span>
                                           </a>
                                       </div>
                                       <div class="col">
                                           <a class="dropdown-icon-item" href="#">
-                                              <img src="assets/images/brands/slack.png" alt="slack" />
+                                              <img src="assets/dashboard/images/brands/slack.png" alt="slack" />
                                               <span>Slack</span>
                                           </a>
                                       </div>
@@ -275,7 +275,7 @@
                                   <a href="#" class="text-reset notification-item">
                                       <div class="d-flex">
                                           <img
-                                              src="assets/images/users/avatar-3.jpg"
+                                              src="assets/dashboard/images/users/avatar-3.jpg"
                                               class="me-3 rounded-circle avatar-xs"
                                               alt="user-pic" />
                                           <div class="flex-1">
@@ -316,7 +316,7 @@
                                   <a href="#" class="text-reset notification-item">
                                       <div class="d-flex">
                                           <img
-                                              src="assets/images/users/avatar-4.jpg"
+                                              src="assets/dashboard/images/users/avatar-4.jpg"
                                               class="me-3 rounded-circle avatar-xs"
                                               alt="user-pic" />
                                           <div class="flex-1">
@@ -364,13 +364,13 @@
                   <a href="index.html" class="logo logo-dark">
                       <span class="logo-sm">
                           <img
-                              src="assets/images/logo-sm-dark.png"
+                              src="assets/dashboard/images/logo-sm-dark.png"
                               alt="logo-sm-dark"
                               height="24" />
                       </span>
                       <span class="logo-lg">
                           <img
-                              src="assets/images/logo-dark.png"
+                              src="assets/dashboard/images/logo-dark.png"
                               alt="logo-dark"
                               height="22" />
                       </span>
@@ -379,13 +379,13 @@
                   <a href="index.html" class="logo logo-light">
                       <span class="logo-sm">
                           <img
-                              src="assets/images/logo-sm-light.png"
+                              src="assets/dashboard/images/logo-sm-light.png"
                               alt="logo-sm-light"
                               height="24" />
                       </span>
                       <span class="logo-lg">
                           <img
-                              src="assets/images/logo-light.png"
+                              src="assets/dashboard/images/logo-light.png"
                               alt="logo-light"
                               height="22" />
                       </span>
@@ -520,7 +520,7 @@
                           <li class="menu-title">Menu</li>
 
                           <li>
-                              <a href="" class="waves-effect">
+                              <a href="dashboard" class="waves-effect">
                                   <i class="uim uim-airplay"></i><span class="badge rounded-pill bg-success float-end">3</span>
                                   <span>Dashboard</span>
                               </a>
@@ -556,7 +556,7 @@
                       <span class="d-flex align-items-center">
                           <div class="flex-shrink-0">
                               <img
-                                  src="assets/images/users/avatar-2.jpg"
+                                  src="assets/dashboard/images/users/avatar-2.jpg"
                                   class="img-fluid header-profile-user rounded-circle"
                                   alt="" />
                           </div>

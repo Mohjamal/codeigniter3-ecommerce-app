@@ -11,10 +11,10 @@
         name="description" />
     <meta content="Themesdesign" name="author" />
     <base href="<?php echo base_url(); ?>">
-    <?php $this->load->view("links"); ?>
+    <?php $this->load->view("dashboard/layouts/links"); ?>
 </head>
 
-<?php $this->load->view("header"); ?>
+<?php $this->load->view("dashboard/layouts/header"); ?>
 
 
 <!-- ============================================================== -->
@@ -35,7 +35,7 @@
                         <div
                             class="card-header border-0 align-items-center d-flex pb-0">
                             <h4 class="card-title mb-0 flex-grow-1">
-                                Pincode
+                                Category
                             </h4>
                             <div>
                                 <div class="dropdown">
@@ -64,18 +64,22 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="pincode" id="" placeholder="">
-                                        <label for="floatingFirstnameInput">Pincode</label>
+                                        <select class="form-select" name="parent_id" id="floatingSelectGrid">
+                                            <option value="" selected>select</option>
+                                            <?php foreach ($categories as $cat) { ?>
+                                                <option value="<?= $cat->cat_id; ?>"><?= $cat->cat_name; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <label for="floatingSelectGrid">Parent Category</label>
                                     </div>
-                                    <?= form_error('pincode') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="delivery_charges" id="" placeholder="">
-                                        <label for="floatingFirstnameInput">Delivery Charges</label>
+                                        <input type="text" class="form-control" name="cat_name" id="" placeholder="">
+                                        <label for="floatingFirstnameInput">Category Name</label>
                                     </div>
-                                    <?= form_error('delivery_charges') ?>
+                                    <?= form_error('cat_name') ?>
                                 </div>
                             </div>
                             <div class="row">
@@ -108,4 +112,4 @@
     </div>
     <!-- End Page-content -->
 
-    <?php $this->load->view("footer"); ?>
+    <?php $this->load->view("dashboard/layouts/footer"); ?>

@@ -24,7 +24,7 @@ class Settings extends CI_Controller
                 redirect('settings/pincode');
             }
         } else {
-            $this->load->view('pincode');
+            $this->load->view('dashboard/pages/pincode');
         }
     }
 }

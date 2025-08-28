@@ -25,7 +25,7 @@ class Category extends CI_Controller
 
             $data['categories'] = $this->CategoryModel->all_category();
 
-            $this->load->view('category', $data);
+            $this->load->view('dashboard/pages/category', $data);
         }
     }
 }
