@@ -540,6 +540,13 @@
                               </a>
                           </li>
 
+                          <li>
+                              <a href="settings/banner" class="waves-effect">
+                                  <i class="uim uim-airplay"></i>
+                                  <span>Banner</span>
+                              </a>
+                          </li>
+
                       </ul>
                   </div>
                   <!-- Sidebar -->
@@ -554,12 +561,12 @@
                       aria-haspopup="true"
                       aria-expanded="false">
                       <span class="d-flex align-items-center">
-                          <div class="flex-shrink-0">
+                          <!-- <div class="flex-shrink-0">
                               <img
                                   src="assets/dashboard/images/users/avatar-2.jpg"
                                   class="img-fluid header-profile-user rounded-circle"
                                   alt="" />
-                          </div>
+                          </div> -->
 
                           <div class="flex-grow-1 ms-2 text-start">
                               <span class="ms-1 fw-medium user-name-text">Steven Deese</span>
