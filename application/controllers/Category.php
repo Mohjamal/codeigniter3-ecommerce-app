@@ -28,4 +28,10 @@ class Category extends CI_Controller
             $this->load->view('dashboard/pages/category', $data);
         }
     }
+
+    public function get_sub_cat()
+    {
+        $cat_id = $this->input->post('cat_id');
+        print_r($this->CategoryModel->get_sub_cat($cat_id));
+    }
 }

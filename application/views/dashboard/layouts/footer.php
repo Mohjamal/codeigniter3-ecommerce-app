@@ -113,8 +113,27 @@
 
         <!-- App js -->
         <script src="assets/dashboard/js/app.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         </body>
 
         <!-- Mirrored from themesdesign.in/tocly/layouts/5.3.1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 08:52:54 GMT -->
 
         </html>
+
+        <script>
+            function get_categories(cat_id) {
+
+                $.ajax({
+                    url: "<?php echo base_url('category/get_sub_cat') ?>",
+                    method: "post",
+                    data: {
+                        cat_id: cat_id
+                    },
+                    success: function(data) {
+                        $('.sub_cat').html(data);
+                    }
+                });
+
+            }
+        </script>
