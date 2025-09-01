@@ -1,3 +1,11 @@
+<?php
+if ($this->session->userdata('prod_id') != '') {
+    $prod_id = $this->session->userdata('prod_id');
+} else {
+    $this->session->set_userdata('prod_id', mt_rand(11111, 99999));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from themesdesign.in/tocly/layouts/5.3.1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 08:52:23 GMT -->
@@ -64,15 +72,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="" id="" placeholder="">
+                                        <input type="number" class="form-control" name="prod_id" id="" value="<?= set_value('prod_id', $prod_id) ?>" placeholder="" readonly>
                                         <label for="floatingFirstnameInput">Product ID</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('prod_id') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <select class="form-select" name="parent_id" id="floatingSelectGrid" onchange="get_categories(this.value)">
+                                        <select class="form-select" name="category" id="floatingSelectGrid" onchange="get_categories(this.value)">
                                             <option value="" selected>select</option>
                                             <?php foreach ($categories as $cat) { ?>
                                                 <option value="<?= $cat->cat_id; ?>"><?= $cat->cat_name; ?></option>
@@ -80,125 +88,125 @@
                                         </select>
                                         <label for="floatingSelectGrid">Category</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('category') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <select class="form-select sub_cat" name="sub_cat" id="floatingSelectGrid">
+                                        <select class="form-select sub_category" name="sub_category" id="floatingSelectGrid">
                                             <option value="" selected>select</option>
                                         </select>
                                         <label for="floatingSelectGrid">Sub Category</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('sub_category') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="" id="" placeholder="Product Name">
+                                        <input type="text" class="form-control" name="prod_name" id="" placeholder="Product Name">
                                         <label for="floatingFirstnameInput">Product Name</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('prod_name') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="" id="" placeholder="Product Name">
+                                        <input type="text" class="form-control" name="brand" id="" placeholder="Product Name">
                                         <label for="floatingFirstnameInput">Product Brand</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('brand') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <select class="form-select" name="" id="floatingSelectGrid">
+                                        <select class="form-select" name="featured" id="floatingSelectGrid">
                                             <option value="" selected>select</option>
                                             <option value="1">Deal of The Month</option>
                                             <option value="2">New Arrival</option>
                                         </select>
                                         <label for="floatingSelectGrid">Featured</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('featured') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-select" name="" id=""></textarea>
+                                        <textarea class="form-select" name="highlights" id=""></textarea>
                                         <label for="floatingSelectGrid">Highlights</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('highlights') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-select" name="" id=""></textarea>
+                                        <textarea class="form-select" name="description" id=""></textarea>
                                         <label for="floatingSelectGrid">Description</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('description') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="" id="" placeholder="">
+                                        <input type="number" class="form-control" name="stock" id="" placeholder="">
                                         <label for="floatingSelectGrid">Product Stock</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('stock') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="" id="" placeholder="">
+                                        <input type="number" class="form-control" name="mrp" id="" placeholder="">
                                         <label for="floatingSelectGrid">Product MRP</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('mrp') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" name="" id="" placeholder="">
+                                        <input type="number" class="form-control" name="selling_price" id="" placeholder="">
                                         <label for="floatingSelectGrid">Product Selling Price</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('selling_price') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="" id="" placeholder="">
+                                        <input type="text" class="form-control" name="meta_title" id="" placeholder="">
                                         <label for="floatingFirstnameInput">Meta Title</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('meta_title') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="" id="" placeholder="">
+                                        <input type="text" class="form-control" name="meta_keywords" id="" placeholder="">
                                         <label for="floatingFirstnameInput">Meta Keywords</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('meta_keywords') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="" id="" placeholder="">
+                                        <input type="text" class="form-control" name="meta_desc" id="" placeholder="">
                                         <label for="floatingFirstnameInput">Meta Description</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('meta_desc') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="file" class="form-control" name="" id="" placeholder="">
+                                        <input type="file" class="form-control" name="prod_main_image" id="" placeholder="">
                                         <label for="floatingFirstNameInput">Product Image</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('prod_main_image') ?>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="file" class="form-control" name="" id="" placeholder="">
+                                        <input type="file" class="form-control" name="gallery_image" id="" placeholder="">
                                         <label for="floatingFirstNameInput">Product Gallery Image</label>
                                     </div>
-                                    <?= form_error('') ?>
+                                    <?= form_error('gallery_image') ?>
                                 </div>
 
                                 <div class="col-md-6">

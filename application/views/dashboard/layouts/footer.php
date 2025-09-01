@@ -131,7 +131,7 @@
                         cat_id: cat_id
                     },
                     success: function(data) {
-                        $('.sub_cat').html(data);
+                        $('.sub_category').html(data);
                     }
                 });
 
