@@ -7,6 +7,7 @@ class Product extends CI_Controller
     {
         parent::__construct();
         $this->load->model('CategoryModel');
+        $this->load->model('ProductModel');
     }
 
     public function index()
@@ -23,14 +24,46 @@ class Product extends CI_Controller
         $this->form_validation->set_rules('selling_price', 'selling price', 'required|trim');
         $this->form_validation->set_rules('status', 'status', 'required|trim');
 
-        if (empty($_FILES['prod_main_page']['name'])) {
+        if (empty($_FILES['prod_main_image']['name'])) {
             $this->form_validation->set_rules('prod_main_image', 'product image', 'required|trim');
         }
 
         if ($this->form_validation->run()) {
-        } else {
 
+            $post = $this->input->post();
+
+            $config = array(
+                'upload_path' => './uploads/',
+                'allowed_types' => '*',
+            );
+
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('prod_main_image');
+
+            $data = $this->upload->data();
+
+            $post['prod_main_image'] = $data['raw_name'] . $data['file_ext'];
+
+            print_r($post);
+
+            $check = $this->ProductModel->add_product($post);
+            if ($check) {
+                $this->session->set_flashdata('succMsg', 'Product added Successfully');
+                redirect('product');
+            } else {
+                $this->session->set_flashdata('errMsg', 'Product failed to add');
+                redirect('product');
+            }
+        } else {
             $data['categories'] = $this->CategoryModel->all_category();
+
+            if ($this->session->userdata('prod_id') != '') {
+                $prod_id = $this->session->userdata('prod_id');
+            } else {
+                $prod_id = $this->session->set_userdata('prod_id', mt_rand(11111, 99999));
+            }
+
+            $data['prod_id'] = $prod_id;
 
             $this->load->view('dashboard/pages/product', $data);
         }

@@ -1,11 +1,3 @@
-<?php
-if ($this->session->userdata('prod_id') != '') {
-    $prod_id = $this->session->userdata('prod_id');
-} else {
-    $this->session->set_userdata('prod_id', mt_rand(11111, 99999));
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from themesdesign.in/tocly/layouts/5.3.1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Nov 2023 08:52:23 GMT -->
@@ -34,6 +26,12 @@ if ($this->session->userdata('prod_id') != '') {
             <?php if ($this->session->flashdata('succMsg')) { ?>
                 <div class="alert alert-success">
                     <?php echo $this->session->flashdata('succMsg'); ?>
+                </div>
+            <?php } ?>
+
+            <?php if ($this->session->flashdata('errMsg')) { ?>
+                <div class="alert alert-success">
+                    <?php echo $this->session->flashdata('errMsg'); ?>
                 </div>
             <?php } ?>
 
