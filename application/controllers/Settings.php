@@ -39,7 +39,7 @@ class Settings extends CI_Controller
         if ($this->form_validation->run()) {
             $post = $this->input->post();
             $config = array(
-                'upload_path' => './uploads',
+                'upload_path' => './uploads/banner',
                 'allowed_types' => 'gif|jpg|png|jpeg',
             );
 
